@@ -88,6 +88,8 @@ def update_score(score, high_score):
 
 pygame.mixer.pre_init(frequency=44100, size=32, channels=2, buffer=2048)
 pygame.init()
+# Set the window title of pygame.
+pygame.display.set_caption("Flappy bird")
 
 # vars
 clock = pygame.time.Clock()
