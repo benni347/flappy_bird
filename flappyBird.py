@@ -70,6 +70,9 @@ def score_display(game_state):
         score_surface = game_font.render(f"Score: {int(score)}", True, (255, 255, 255))
         score_rect = score_surface.get_rect(center=(288, 100))
         screen.blit(score_surface, score_rect)
+        start_tip_surface = game_font.render("Press arrow up to jump.", True, (255, 255, 255))
+        start_tip_rect = start_tip_surface.get_rect(center=(288, 850))
+        screen.blit(start_tip_surface, start_tip_rect)
     if game_state == "game_over":
         score_surface = game_font.render(f"Score: {int(score)}", True, (255, 255, 255))
         score_rect = score_surface.get_rect(center=(288, 100))
@@ -77,6 +80,9 @@ def score_display(game_state):
         high_score_surface = game_font.render(f"High score: {int(high_score)}", True, (255, 255, 255))
         high_score_rect = score_surface.get_rect(center=(288, 850))
         screen.blit(high_score_surface, high_score_rect)
+        play_again_surface = game_font.render("Press space to play again.", True, (255, 255, 255))
+        play_again_rect = play_again_surface.get_rect(center=(288, 900))
+        screen.blit(play_again_surface, play_again_rect)
 
 
 def update_score(score, high_score):
@@ -123,7 +129,7 @@ bird_movement = 0
 pipe_surface = pygame.transform.scale2x(pygame.image.load("sprites/pipe-green.png"))
 pipe_list = []
 SPAWNPIPE = pygame.USEREVENT
-pygame.time.set_timer(SPAWNPIPE, 1200)
+pygame.time.set_timer(SPAWNPIPE, 950)
 
 game_over_surface = pygame.transform.scale2x(pygame.image.load("sprites/message.png").convert_alpha())
 game_over_rect = game_over_surface.get_rect(center=(288, 512))
