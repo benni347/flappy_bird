@@ -1,0 +1,1 @@
+I got the assets from this github repository: "https://github.com/samuelcust/flappy-bird-assets"
